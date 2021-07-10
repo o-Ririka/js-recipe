@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>クイズ</h1>
+    <h2>私の好きな色はなんでしょう？</h2>
+    <div>
+      <button id="yellow-button">黄色</button>
+      <button id="green-button">みどり</button>
+      <button id="black-button">黒</button>
+    </div>
+    <div id="display">回答を表示する場所</div>
+
+    <script>
+      const yellow = document.getElementById("yellow-button")
+      const green = document.getElementById("green-button")
+      const black = document.getElementById("black-button")
+      const display = document.getElementById("display")
+
+      yellow.onclick = function() {
+        display.textContent = "普通"
+      }
+      green.onclick = function() {
+        display.textContent = "好き"
+      }
+      black.onclick = function() {
+        display.textContent = "大好き"
+      }
+    </script>
+  </body>
+</html>
