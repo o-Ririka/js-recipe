@@ -15,18 +15,20 @@
       const memoInput = document.getElementById("memo-input")
       const addButton = document.getElementById("add-button")
       const memoContainer = document.getElementById("memo-container")
+
+      let memos = []
+
       addButton.onclick = function() {
         // input に 入力した 内容を 定数 text に 入れる
         // console.dir(memoInput);
         const text = memoInput.value
-
-        const div = document.createElement("dir")
-        div.textContent = text
-
-        memoContainer.append(div)
-        const value = document.createElement("div")
-        value.textContent = "text"
-        memoContainer.append(value)
+        memos.push(text)
+        memoContainer.innerHTML = ""
+        for (let i = 0; i < memos.length; i++) {
+          const div = document.createElement("div")
+          div.textContent = memos[i]
+          memoContainer.append(div)
+        }
       }
     </script>
   </body>
